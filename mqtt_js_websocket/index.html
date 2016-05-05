@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket api</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="large-12 columns text-center">
+            <h1>MQTT <small>WebSocket</small></h1>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="row">
+        <div class="large-8 medium-8 columns">
+            <h3>MQTT <small>Connect</small></h3>
+            <div class="callout">
+                <form>
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <label>
+                                <input id="url" type="text" placeholder="iot.eclipse.org">
+                            </label>
+                        </div>
+                        <div class="medium-4 columns">
+                            <label>
+                                <input id="port" type="text" placeholder="80">
+                            </label>
+                        </div>
+                        <div class="medium-2 columns">
+
+                            <a href="#" id="connect" class="success button">Connect</a>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <h3>MQTT <small>Subscribe</small></h3>
+            <div class="callout">
+
+                <form>
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <label>
+                                <input id="topic" type="text" placeholder="TOPIC">
+                            </label>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a href="#" id="subscribe" class="success button">Subscribe</a>
+
+                        </div>
+                        <div class="medium-4 columns">
+                          <kbd>#</kbd> <small><strong>sub-tree of the hierarchy</strong></small>
+                          <br>
+                          <kbd>+</kbd> <small><strong>single level of the hierarchy</strong></small>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <h3>Log <small>messages</small><a id="clearLog" class="tiny button alert float-right">Clear log</a></h3>
+            <div id="messages" class="callout"></div>
+        </div>
+
+        <div class="large-4 medium-4 columns">
+
+            <h3>Status</h3>
+            <div class="callout">
+                <strong>Connected:</strong> <span class="alert label" id="connected_status">NO</span><a href="#" id="disconnect" class="tiny alert button float-right invisible">Disconnect</a>
+                <hr>
+                <strong>Subscribed topic:</strong> <span class="label" id="subscribed_topic"></span> <a href="#" id="unsubscribe" class="tiny alert button float-right invisible">Unsubscribe</a>
+            </div>
+
+            <h3>Measurments data</h3>
+            <div class="callout text-center">
+                <div class="row">
+                    <span class="warning label">Temperature</span>
+                    <div class="result-number" id="temp_value">-</div>
+                </div>
+                <div class="row">
+                    <span class="warning label">Humidity</span>
+                    <div class="result-number" id="hum_value">-</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/moment.js"></script>
+    <script src="js/vendor/mqttws31.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.result-number{
+  font-size: 78px;
+}
+.border-box > span{
+  border-left: 3px solid red;
+  padding-left: 5px;
+}
