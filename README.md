@@ -7,4 +7,13 @@ Use Raspberry Pi to send (publish) the DHT11 sensor data (temperature and humidi
 ## Raspberry Pi setup
 Publisher is written in python but before running it you should install  [Adafruit](https://github.com/adafruit/Adafruit_Python_DHT) and [Paho](https://eclipse.org/paho/clients/python/) libraries.
 
-TODO - add pictures for the Raspberry Pi
+#### Hardware
+- Raspberry PI 2
+- Breadboard & 3 Jumper Wires
+- 1 x DHT11 sensor
+- 1 x 10K Resistor
+
+#### How it looks like
+![Image 1](/images/img_1.jpg)
+
+![Image 2](/images/img_2.jpg)
